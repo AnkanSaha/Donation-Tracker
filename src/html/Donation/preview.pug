@@ -1,0 +1,37 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  meta(name='description' content='donate to your favourite youtuber')
+  meta(name='keywords' content='donate')
+  meta(name='author' content='Ankan Saha')
+  // tailwindcss for production
+  link(rel='stylesheet' href='../../css/TailwindCSS/Tailwind.css')
+  // Custom css for production
+  link(rel='stylesheet' href='../..//css/Donation/preview.css')
+  // Favicon
+  link(rel='shortcut icon' href=profileUrls type='image/x-icon')
+  title Support #{creatorName} - TIOBU
+header
+  nav.flex
+    a(href='/')
+      img.ml-6.py-4(class='w-[4.1rem] h-[5.5rem] rounded-[100%]' src=profileUrls alt='creator')
+    span#cratorname.mx-5.relative.font-extrabold.text-xl(class='top-[2.0rem]') #{creatorName}
+  hr
+main
+  h2.m-auto.relative.top-6.font-extrabold(class='w-8/12 lg:top-[3.5rem] lg:ml-[23rem] lg:text-2xl') Send Your Love To #{creatorName} to Become a real Fan
+  .relative.m-auto(class='w-[86%] mt-[5.25rem]')
+    div
+      .relative.mt-1.rounded-md.shadow-sm
+        .pointer-events-none.absolute.inset-y-0.left-0.flex.items-center.pl-3
+          span.text-gray-500(class='sm:text-sm') $
+        input#price.block.w-full.rounded-md.border-gray-300.pl-7.pr-12(type='text' name='price' class='focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm' placeholder='0.00')
+        .absolute.inset-y-0.right-0.flex.items-center
+          label.sr-only(for='currency') Currency
+          select#currency.h-full.rounded-md.border-transparent.bg-transparent.py-0.pl-2.pr-7.text-gray-500(name='currency' class='focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm')
+            option USD
+    input#Donorname.bg-gray-50.border.border-gray-300.text-gray-900.text-sm.rounded-lg.block.w-full.my-5(type='text' class='focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500' placeholder='Enter Name' required='')
+    textarea#message.block.w-full.text-sm.text-gray-900.bg-gray-50.rounded-lg.border.border-gray-300(rows='4' class='p-2.5 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500' placeholder='Your message...(optional)')
+  button#PayBtn.px-5.py-2.rounded-3xl.bg-blue-700.text-white.relative(class='left-[7.75rem] top-[7.5rem] lg:left-[36.25rem] lg:top-[8.25rem] hover:bg-blue-900') Support
+script(src='../../javascript/Donation/preview.js')

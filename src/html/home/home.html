@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="donate to your favourite youtuber" />
+    <meta name="keywords" content="donate" />
+    <meta name="author" content="Ankan Saha" />
+    <!-- tailwindcss for production -->
+    <link rel="stylesheet" href="../../css/TailwindCSS/Tailwind.css" />
+    <!-- Favicon  -->
+    <link
+      rel="shortcut icon"
+      href="../../assets/image/user.png"
+      type="image/x-icon"
+    />
+    <title>TIOBU - donate to your favourite youtuber</title>
+  </head>
+  <body>
+    <header>
+      <nav
+        class="relative px-4 py-4 flex justify-between items-center bg-indigo-700"
+      >
+        <a class="text-3xl font-bold leading-none" href="/">
+          <img
+            src="../../assets/image/user.png"
+            class="h-10 rounded-[100%]"
+            alt="logo"
+            viewBox="0 0 100 100"
+            alt="user-img"
+          />
+        </a>
+        <span
+          id="frontName"
+          class="inline-block lg:ml-5 text-white font-extrabold font-mono text-xl"
+          >TIOBU</span
+        >
+        <div class="lg:hidden">
+          <button class="navbar-burger flex items-center text-blue-600 p-3">
+            <img
+              src="../../assets/image/Hamburger--icon.png"
+              class="block h-4 w-4 fill-current"
+              viewBox="0 0 20 20"
+              alt=""
+            />
+          </button>
+        </div>
+        <ul
+          class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6"
+        >
+          <li>
+            <a class="text-sm text-white hover:text-gray-500" href="/">Home</a>
+          </li>
+          <li class="text-gray-300"></li>
+          <li>
+            <a class="text-sm text-white hover:text-gray-500" href="/about"
+              >About Us</a
+            >
+          </li>
+          <li class="text-gray-300"></li>
+          <li>
+            <a class="text-sm text-white hover:text-gray-500" href="/history"
+              >History</a
+            >
+          </li>
+          <li class="text-gray-300"></li>
+          <li>
+            <a class="text-sm text-white hover:text-gray-500" href="/contact"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <a
+          class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-400 text-sm text-gray-900 font-bold rounded-xl transition duration-200 SignMethod"
+          href="/signin"
+          >Sign In</a
+        >
+        <a
+          class="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200 SignMethod"
+          href="/signup"
+          >Sign up</a
+        >
+      </nav>
+      <div class="navbar-menu relative z-50 hidden">
+        <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+        <nav
+          class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto"
+        >
+          <div class="flex items-center mb-8">
+            <a class="mr-auto text-3xl font-bold leading-none" href="/">
+              <img
+                src="../../assets/image/user.png"
+                class="h-12"
+                alt="logo rounded-[100%]"
+                viewBox="0 0 100 100"
+                alt="user-img"
+              />
+            </a>
+            <button class="navbar-close">
+              <svg class="h-6 w-6 text-gray-600" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <div>
+            <ul>
+              <li class="mb-1">
+                <a
+                  class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                  href="/"
+                  >Home</a
+                >
+              </li>
+              <li class="mb-1">
+                <a
+                  class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                  href="/about"
+                  >About Us</a
+                >
+              </li>
+              <li class="mb-1">
+                <a
+                  class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                  href="/history"
+                  >History</a
+                >
+              </li>
+              <li class="mb-1">
+                <a
+                  class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                  href="/contact"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="mt-auto">
+            <div class="pt-6">
+              <a
+                class="block px-4 py-3 mb-3 text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl SignMethod"
+                href="/signin"
+                >Sign in</a
+              >
+              <a
+                class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700 rounded-xl SignMethod"
+                href="/signup"
+                >Sign Up</a
+              >
+            </div>
+            <p class="my-4 text-xs text-center text-gray-400">
+              <span>Copyright © 2021</span>
+            </p>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <h3 class="text-lg my-4 mx-3 font-extrabold font-serif lg:mx-8 lg:my-5">
+        Recommendated Creators
+      </h3>
+      <!-- Rows -->
+      <div
+        class="flex justify-between flex-col lg:flex-row mx-5 flex-wrap"
+        id="renderFront"
+      ></div>
+      <img
+        id="loadingImage"
+        class="w-14 absolute right-[11rem] top-[14.25rem] lg:right-[42.5rem] animate-spin"
+        alt="loadingImage"
+      />
+    </main>
+  </body>
+  <!-- custom JS -->
+  <script src="../../javascript/home/home.js"></script>
+</html>

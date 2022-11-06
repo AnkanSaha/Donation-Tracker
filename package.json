@@ -1,0 +1,33 @@
+{
+  "name": "donation-tracker",
+  "version": "1.0.5",
+  "description": "Track Donation details with auth",
+  "main": "donate.js",
+  "scripts": {
+    "build": "tailwindcss build -i ./src/css/TailwindCSS/base.css -o src/css/TailwindCSS/Tailwind.css -c tailwind.config.js --minify",
+    "dev": "node donate.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AnkanSaha/Donation-Tracker"
+  },
+  "keywords": [
+    "Donate"
+  ],
+  "author": "Ankan Saha",
+  "license": "MIT",
+  "dependencies": {
+    "@tailwindcss/forms": "^0.5.3",
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^6.7.1",
+    "pug": "^3.0.2",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.18",
+    "tailwindcss": "^3.2.1"
+  }
+}
