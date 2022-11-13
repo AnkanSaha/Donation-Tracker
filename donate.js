@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 4000;
+const port = 4009;
 const routing = require("./router");
 const PostRouter = require("./PostRequestHandler");
 const QueryRouter = require("./QueryHandler");
