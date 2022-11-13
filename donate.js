@@ -1,9 +1,11 @@
 const express = require("express");
 const app = express();
-const port = 4009;
+const port = 4000;
 const routing = require("./router");
 const PostRouter = require("./PostRequestHandler");
 const QueryRouter = require("./QueryHandler");
+const helmet = require("helmet");
+const CORS = require("cors");
 // configure the app to use bodyParser()
 const bodyParser = require("body-parser");
 app.use(
@@ -20,6 +22,11 @@ app.use(
     parameterLimit: 10000000,
   })
 );
+// using helmet to secure Express headers
+app.use(helmet({contentSecurityPolicy: false}));
+// using CORS to allow cross-origin requests
+var domains = ['https://donate.theankan.live', 'http://127.0.0.1:4000/'];
+app.use(CORS(domains));
 // link static files
 app.use(express.static("src"));
 // link the router

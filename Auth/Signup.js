@@ -5,7 +5,6 @@ const DB_Config = require("../mongodb/DB_Config");
 function SignUpProcess(request, res) {
   var { v4: uuidv4 } = require("uuid");
   const AccountID = uuidv4();
-  console.log(AccountID, request.body);
   mongoose
     .connect(DB_Config.url)
     .then(() => {

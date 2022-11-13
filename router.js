@@ -1,4 +1,3 @@
-const { Router } = require("express");
 const express = require("express"); // import express
 const route = express.Router(); // create a router
 const currentDir = __dirname; // get current directory
