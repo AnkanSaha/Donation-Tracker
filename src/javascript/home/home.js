@@ -39,9 +39,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+
 // inject loading animation
-var lodingText = `<h5 id="loadingText" class="w-6/12 m-auto lg:ml-[40%] relative top-52 lg:top-44 font-extrabold lg:text-2xl text-red-700 animate-bounce">Content is Loading ...</h5>`;
-var LoadingImageSRC = `../../assets/image/LoadingImage.png`;
+let lodingText = `<h5 id="loadingText" class="w-6/12 m-auto lg:ml-[40%] relative top-52 lg:top-44 font-extrabold lg:text-2xl text-red-700 animate-bounce">Content is Loading ...</h5>`;
+let LoadingImageSRC = `../../assets/image/LoadingImage.png`;
 document.getElementById("loadingImage").src = LoadingImageSRC;
 document.getElementById("renderFront").innerHTML = lodingText;
 

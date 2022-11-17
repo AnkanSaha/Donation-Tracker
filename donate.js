@@ -4,7 +4,6 @@ const port = 4009;
 const routing = require("./router");
 const PostRouter = require("./PostRequestHandler");
 const QueryRouter = require("./QueryHandler");
-const helmet = require("helmet");
 const CORS = require("cors");
 // configure the app to use bodyParser()
 const bodyParser = require("body-parser");
@@ -22,8 +21,6 @@ app.use(
     parameterLimit: 10000000,
   })
 );
-// using helmet to secure Express headers
-app.use(helmet({contentSecurityPolicy: false}));
 // using CORS to allow cross-origin requests
 var domains = ['https://donate.theankan.live', 'http://127.0.0.1:4000/'];
 app.use(CORS(domains));
