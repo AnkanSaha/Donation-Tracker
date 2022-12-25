@@ -5,7 +5,8 @@
   "main": "donate.js",
   "scripts": {
     "build": "tailwindcss build -i ./src/css/TailwindCSS/base.css -o src/css/TailwindCSS/Tailwind.css -c tailwind.config.js --minify",
-    "dev": "node donate.js"
+    "dev": "node donate.js",
+    "start":"pm2 start donate.js"
   },
   "repository": {
     "type": "git",
