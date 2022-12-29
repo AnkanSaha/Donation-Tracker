@@ -1,19 +1,4 @@
-const os = require('os');
-const cluster = require('cluster');
-const MaxWorker = os.cpus().length;
-console.log('MaxWorker: ', MaxWorker);
-
-if(cluster.isMaster){
-  let StartWorker = 0;
-  while(StartWorker < MaxWorker){
-    cluster.fork();
-    StartWorker++;
-  }
-  cluster.on('exit', () => {
-    cluster.fork();
-  })
-}else{
-  const express = require("express");
+const express = require("express");
 const app = express();
 const port = 4009;
 const routing = require("./router");
@@ -50,4 +35,3 @@ app.set("views", "./src/html/Donation");
 app.set("view engine", "pug");
 //listen to port
 app.listen(port, () => console.log(`app listening on port ${port}!`));
-}
